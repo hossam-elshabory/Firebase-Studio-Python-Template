@@ -1,0 +1,28 @@
+{
+    "recommendations": [
+        "mhutchie.git-graph",
+        "mongodb.mongodb-vscode",
+        "ms-azuretools.vscode-docker",
+        "pkief.material-icon-theme",
+        "redhat.vscode-yaml",
+        "yzhang.markdown-all-in-one",
+        "ms-toolsai.jupyter",
+        "ms-python.python",
+        "charliermarsh.ruff",
+        "KevinRose.vsc-python-indent",
+        "ms-python.debugpy",
+        "ms-toolsai.jupyter-keymap",
+        "ms-toolsai.jupyter-renderers",
+        "ms-toolsai.vscode-jupyter-cell-tags",
+        "ms-toolsai.vscode-jupyter-slideshow",
+        "saoudrizwan.claude-dev",
+        "codezombiech.gitignore",
+        "luma.jupyter",
+        "bungcip.better-toml",
+        "usernamehw.errorlens",
+        "streetsidesoftware.code-spell-checker",
+        "oderwat.indent-rainbow",
+        "aaron-bond.better-comments",
+        "Hamza-Aziane.obsidian-dark"
+    ]
+}

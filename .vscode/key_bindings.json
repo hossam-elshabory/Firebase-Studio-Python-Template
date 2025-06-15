@@ -1,0 +1,28 @@
+[
+    {
+        "key": "alt+q",
+        "command": "python.execInTerminal-icon"
+    },
+    {
+        "key": "alt+d",
+        "command": "cSpell.addIssuesToDictionary"
+    },
+    {
+        "key": "alt+f",
+        "command": "ruff.executeAutofix"
+    },
+    {
+        "key": "alt+i",
+        "command": "ruff.executeOrganizeImports"
+    },
+    {
+        "key": "ctrl+numpad_divide",
+        "command": "editor.action.addCommentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+numpad_multiply",
+        "command": "editor.action.removeCommentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    }
+]
