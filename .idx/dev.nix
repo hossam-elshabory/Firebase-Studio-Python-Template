@@ -38,6 +38,7 @@
       "aaron-bond.better-comments"
       "bungcip.better-toml"
       "Hamza-Aziane.obsidian-dark"
+      "RooVeterinaryInc.roo-cline"
     ];
     # Enable previews
     previews = {
