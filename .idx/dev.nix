@@ -36,7 +36,6 @@
       "streetsidesoftware.code-spell-checker"
       "oderwat.indent-rainbow"
       "aaron-bond.better-comments"
-      "bungcip.better-toml"
       "Hamza-Aziane.obsidian-dark"
       "RooVeterinaryInc.roo-cline"
     ];
