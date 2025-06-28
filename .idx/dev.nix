@@ -76,6 +76,7 @@
         '';
         setting-up-dev-env = ''
           pipx install poetry
+          pipx install uv
           pipx install commitizen
           pipx inject commitizen cz-conventional-gitmoji
 
