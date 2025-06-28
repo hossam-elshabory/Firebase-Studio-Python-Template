@@ -2,7 +2,6 @@
     "recommendations": [
         "mhutchie.git-graph",
         "mongodb.mongodb-vscode",
-        "ms-azuretools.vscode-docker",
         "pkief.material-icon-theme",
         "redhat.vscode-yaml",
         "yzhang.markdown-all-in-one",
@@ -24,6 +23,6 @@
         "oderwat.indent-rainbow",
         "aaron-bond.better-comments",
         "Hamza-Aziane.obsidian-dark",
-        "RooVeterinaryInc.roo-cline",
+        "RooVeterinaryInc.roo-cline"
     ]
 }
