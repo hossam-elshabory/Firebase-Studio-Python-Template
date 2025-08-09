@@ -7,7 +7,7 @@
   packages = [
     pkgs.python311
     pkgs.python311Packages.pip
-    pkgs.pipx
+    pkgs.uv
   ];
   # Sets environment variables in the workspace
   env = { };
@@ -74,16 +74,7 @@
           fi
         '';
         setting-up-dev-env = ''
-          pipx install poetry
-          pipx install uv
-          pipx install commitizen
-          pipx inject commitizen cz-conventional-gitmoji
-
-          pipx ensurepath
-        '';
-        setup_venv = ''
-          python -m venv .venv
-          source .venv/bin/activate
+          uv tool install --with cz-conventional-gitmoji commitizen
         '';
         add-vscode-to-gitignore = ''
           # Add .vscode/ to .gitignore if it's not already there
@@ -94,11 +85,11 @@
             echo ".vscode/ already in .gitignore"
           fi
         '';
-
         remove-template-artifacts = ''
           echo "Removing template artifacts..."
           rm -rf .git
           rm -f README.md
+          rm -f .gitignore
         '';
       };
       # Runs when the workspace is (re)started
