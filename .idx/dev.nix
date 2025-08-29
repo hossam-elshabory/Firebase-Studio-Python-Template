@@ -81,10 +81,6 @@
 
           pipx ensurepath
         '';
-        setup_venv = ''
-          python -m venv .venv
-          source .venv/bin/activate
-        '';
         add-vscode-to-gitignore = ''
           # Add .vscode/ to .gitignore if it's not already there
           if ! grep -qxF '.vscode/' .gitignore 2>/dev/null; then
