@@ -5,9 +5,10 @@
   channel = "stable-24.05"; # or "unstable"
   # Use https://search.nixos.org/packages to find packages
   packages = [
-    pkgs.python311
-    pkgs.python311Packages.pip
+    pkgs.python312
+    pkgs.python312Packages.pip
     pkgs.pipx
+    pkgs.tree
   ];
   # Sets environment variables in the workspace
   env = { };
@@ -38,6 +39,8 @@
       "aaron-bond.better-comments"
       "Hamza-Aziane.obsidian-dark"
       "RooVeterinaryInc.roo-cline"
+      "ms-azuretools.vscode-containers"
+      "tamasfe.even-better-toml"
     ];
     # Enable previews
     previews = {
@@ -59,20 +62,20 @@
     workspace = {
       # Runs when a workspace is first created
       onCreate = {
-        install-vscode-extensions = ''
-          # Ensure .vscode/extensions.json exists
-          if [ -f .vscode/extensions.json ]; then
-            echo "Installing VS Code extensions from .vscode/extensions.json..."
+        # install-vscode-extensions = ''
+        #   # Ensure .vscode/extensions.json exists
+        #   if [ -f .vscode/extensions.json ]; then
+        #     echo "Installing VS Code extensions from .vscode/extensions.json..."
 
-            # Use jq to extract the extensions and install them
-            jq -r '.recommendations[]' .vscode/extensions.json | while read -r EXTENSION; do
-              echo "Installing $EXTENSION..."
-              code --install-extension "$EXTENSION"
-            done
-          else
-            echo ".vscode/extensions.json not found. Skipping extension installation."
-          fi
-        '';
+        #     # Use jq to extract the extensions and install them
+        #     jq -r '.recommendations[]' .vscode/extensions.json | while read -r EXTENSION; do
+        #       echo "Installing $EXTENSION..."
+        #       code --install-extension "$EXTENSION"
+        #     done
+        #   else
+        #     echo ".vscode/extensions.json not found. Skipping extension installation."
+        #   fi
+        # '';
         setting-up-dev-env = ''
           pipx install poetry
           pipx install uv
@@ -81,15 +84,15 @@
 
           pipx ensurepath
         '';
-        add-vscode-to-gitignore = ''
-          # Add .vscode/ to .gitignore if it's not already there
-          if ! grep -qxF '.vscode/' .gitignore 2>/dev/null; then
-            echo '.vscode/' >> .gitignore
-            echo "Added .vscode/ to .gitignore"
-          else
-            echo ".vscode/ already in .gitignore"
-          fi
-        '';
+        # add-vscode-to-gitignore = ''
+        #   # Add .vscode/ to .gitignore if it's not already there
+        #   if ! grep -qxF '.vscode/' .gitignore 2>/dev/null; then
+        #     echo '.vscode/' >> .gitignore
+        #     echo "Added .vscode/ to .gitignore"
+        #   else
+        #     echo ".vscode/ already in .gitignore"
+        #   fi
+        # '';
 
         remove-template-artifacts = ''
           echo "Removing template artifacts..."
